@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+checkout-magento
+install-sampledata
+install-magento
+#checkout-personalizador

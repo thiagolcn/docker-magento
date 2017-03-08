@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+cd /tmp 
+curl https://codeload.github.com/OpenMage/magento-mirror/tar.gz/$MAGENTO_VERSION -o $MAGENTO_VERSION.tar.gz
+tar xvf $MAGENTO_VERSION.tar.gz 
+cp -R magento-mirror-$MAGENTO_VERSION/* magento-mirror-$MAGENTO_VERSION/.htaccess /var/www/htdocs
+
+chown -R www-data:www-data /var/www/htdocs

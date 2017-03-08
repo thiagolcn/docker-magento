@@ -18,7 +18,7 @@ COPY ./bin/install-magento /usr/local/bin/install-all
 RUN chmod +x /usr/local/bin/install-all
 
 COPY ./sampledata/magento-sample-data-1.9.1.0.tgz /opt/
-COPY ./bin/install-sampledata-1.9 /usr/local/bin/install-sampledata
+COPY ./bin/install-sampledata /usr/local/bin/install-sampledata
 RUN chmod +x /usr/local/bin/install-sampledata
 
 RUN bash -c 'bash < <(curl -s -L https://raw.github.com/colinmollenhour/modman/master/modman-installer)'

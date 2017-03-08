@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-
-git init
-git remote add origin https://thiagolcn@bitbucket.org/thiagolcn/personalizadores.git
-git fetch origin
-git checkout master
