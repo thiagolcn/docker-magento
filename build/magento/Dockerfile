@@ -5,6 +5,11 @@ ENV MAGENTO_VERSION 1.9.2.4
 RUN apt-get update && apt-get install -y mysql-client-5.5 libxml2-dev git vim
 RUN docker-php-ext-install soap
 
+RUN yes | pecl install xdebug \
+    && echo "zend_extension=$(find /usr/local/lib/php/extensions/ -name xdebug.so)" > /usr/local/etc/php/conf.d/xdebug.ini \
+    && echo "xdebug.remote_enable=1" >> /usr/local/etc/php/conf.d/xdebug.ini \
+    && echo "xdebug.remote_autostart=0" >> /usr/local/etc/php/conf.d/xdebug.ini
+
 COPY ./bin/checkout-magento /usr/local/bin/checkout-magento
 RUN chmod +x /usr/local/bin/checkout-magento
 
