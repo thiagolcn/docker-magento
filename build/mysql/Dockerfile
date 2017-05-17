@@ -5,5 +5,3 @@ COPY ./bin/export-magento-data /usr/local/bin/export-magento-data
 RUN chmod +x /usr/local/bin/export-magento-data
 
 VOLUME /var/lib/mysql
-
-#teste
