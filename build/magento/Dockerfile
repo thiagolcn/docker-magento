@@ -2,7 +2,7 @@ FROM occitech/magento:php5.5-apache
 
 ENV MAGENTO_VERSION 1.9.2.4
 
-RUN apt-get update && apt-get install -y mysql-client-5.5 libxml2-dev git vim
+RUN apt-get update && apt-get install -y mysql-client-5.5 libxml2-dev git vim imagemagick
 RUN docker-php-ext-install soap
 
 RUN yes | pecl install xdebug \
